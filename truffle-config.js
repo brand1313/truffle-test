@@ -24,7 +24,7 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 const privateKeys = [
-  "0xeaf04bc0148adf71df7bd5cc8f93dd71ec7594e263ca71a093f1b798ecfb0500"
+  ""
 ]
 module.exports = {
   /**
@@ -73,7 +73,7 @@ module.exports = {
 
     // Useful for private networks
     private: {
-      provider: () => new HDWalletProvider(privateKeys, `http://172.30.1.39:8501`),
+      provider: () => new HDWalletProvider(privateKeys, `:8501`),
       network_id: 75555,   // This network is yours, in the cloud.
       gas: 3000000,
       production: true    // Treats this network as if it was a public net. (default: false)
